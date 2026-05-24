@@ -53,7 +53,7 @@
           <li><a href="#about" class="nav-link" data-section="about">About</a></li>
           <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
           <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
-          <li><a href="#register" class="nav-link nav-btn" data-section="register">Register Now</a></li>
+          <li><a href="#contact" class="nav-link nav-btn" data-section="contact">Contact Me</a></li>
         </ul>
       </nav>
       
@@ -73,41 +73,8 @@
       <div class="hero-container">
         
         <div class="hero-image-wrapper">
-          <div class="flip-card-container">
-            <div class="flip-card-inner" id="profile-flip-card">
-              
-              <!-- Front Face of Card -->
-              <div class="flip-card-front glowing-frame">
-                <img src="profile.jpg" alt="Vignesh B" class="profile-img" id="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex'">
-                <div class="avatar-fallback" id="avatar-placeholder">
-                  <span class="fallback-initials">VB</span>
-                  <span class="fallback-glow"></span>
-                </div>
-                <div class="frame-particles">
-                  <span class="fp fp-1"></span>
-                  <span class="fp fp-2"></span>
-                  <span class="fp fp-3"></span>
-                </div>
-              </div>
-              
-              <!-- Back Face of Card -->
-              <div class="flip-card-back glowing-frame">
-                <div class="back-details">
-                  <h3 class="back-name">VIGNESH B</h3>
-                  <span class="back-role">B.Sc. CS (AIML)</span>
-                  <div class="back-divider"></div>
-                  <ul class="back-info-list">
-                    <li><i class="fa-solid fa-phone"></i> <span>99433 49064</span></li>
-                    <li><i class="fa-solid fa-envelope"></i> <span>vikkyvikky132007@gmail.com</span></li>
-                    <li><i class="fa-solid fa-code-branch"></i> <span>AIML Specialist</span></li>
-                    <li><i class="fa-solid fa-location-dot"></i> <span>Tamil Nadu, India</span></li>
-                  </ul>
-                  <div class="back-status">⚡ ONLINE</div>
-                </div>
-              </div>
-
-            </div>
-          </div>
+          <!-- Loaded transparent profile.png cutout -->
+          <img src="profile.png" alt="Vignesh B" class="profile-img" id="profile-img">
           <div class="profile-badge">
             <span class="badge-dot"></span>
             <span class="badge-text">B.Sc. CS (AIML)</span>
@@ -135,7 +102,7 @@
           </p>
           
           <div class="hero-actions">
-            <a href="#register" class="btn btn-primary ripple-btn">
+            <a href="#contact" class="btn btn-primary ripple-btn">
               <span class="btn-text">Hire Me</span>
               <i class="fa-solid fa-briefcase btn-icon"></i>
             </a>
@@ -172,7 +139,6 @@
       <div class="section-container">
         
         <div class="section-header">
-          <span class="section-tag">// 01. IDENTITY</span>
           <h2 class="section-title">About Me</h2>
           <div class="section-line"></div>
         </div>
@@ -255,7 +221,6 @@
       <div class="section-container">
         
         <div class="section-header">
-          <span class="section-tag">// 02. CAPABILITIES</span>
           <h2 class="section-title">My Tech Stack</h2>
           <div class="section-line"></div>
         </div>
@@ -501,7 +466,6 @@
       <div class="section-container">
         
         <div class="section-header">
-          <span class="section-tag">// 03. EVIDENCE</span>
           <h2 class="section-title">Featured Work</h2>
           <div class="section-line"></div>
         </div>
@@ -678,135 +642,11 @@
       </div>
     </section>
 
-    <!-- REAL-TIME REGISTRATION FORM SECTION -->
-    <section id="register" class="register-section scroll-reveal">
-      <div class="section-container">
-        
-        <div class="section-header">
-          <span class="section-tag">// 04. INTERACTION</span>
-          <h2 class="section-title">Project Registration</h2>
-          <div class="section-line"></div>
-        </div>
-
-        <div class="register-content">
-          
-          <div class="register-info-panel">
-            <h3 class="reg-title">Connect & Initiate</h3>
-            <p class="reg-text">
-              Interested in collaborating, hiring me for a project, or exploring one of my works? Initialize a connection right here. 
-            </p>
-            <p class="reg-text">
-              This form operates with **real-time field validation, error diagnostics, and direct storage sync** to my cloud-hosted Firebase database. Fill out your requirements, and I will be notified immediately.
-            </p>
-            
-            <div class="database-status-badge">
-              <span class="status-pulse active"></span>
-              <span class="status-label">Firebase Node: CONNECTED</span>
-            </div>
-            
-            <div class="form-features-list">
-              <div class="ff-item">
-                <i class="fa-solid fa-bolt ff-icon"></i>
-                <span>Real-Time Error Handling</span>
-              </div>
-              <div class="ff-item">
-                <i class="fa-solid fa-cloud-arrow-up ff-icon"></i>
-                <span>Immediate Database Logging</span>
-              </div>
-              <div class="ff-item">
-                <i class="fa-solid fa-bell ff-icon"></i>
-                <span>Direct Admin Instant Notification</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Glassmorphism Registration Form -->
-          <div class="glass-form-wrapper">
-            <form id="registration-form" class="registration-form" novalidate>
-              
-              <!-- Full Name -->
-              <div class="form-group" id="group-name">
-                <label for="fullName" class="form-label">Full Name</label>
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-user input-icon"></i>
-                  <input type="text" id="fullName" class="form-input" placeholder="John Doe" required>
-                  <i class="fa-solid fa-circle-check status-icon success"></i>
-                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
-                </div>
-                <span class="error-msg">Please enter your full name.</span>
-              </div>
-
-              <!-- Email -->
-              <div class="form-group" id="group-email">
-                <label for="email" class="form-label">Email Address</label>
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-envelope input-icon"></i>
-                  <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
-                  <i class="fa-solid fa-circle-check status-icon success"></i>
-                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
-                </div>
-                <span class="error-msg">Please enter a valid email address.</span>
-              </div>
-
-              <!-- Phone Number -->
-              <div class="form-group" id="group-phone">
-                <label for="phone" class="form-label">Phone Number</label>
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-phone input-icon"></i>
-                  <input type="tel" id="phone" class="form-input" placeholder="9876543210" required>
-                  <i class="fa-solid fa-circle-check status-icon success"></i>
-                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
-                </div>
-                <span class="error-msg">Please enter a 10-digit phone number.</span>
-              </div>
-
-              <!-- WhatsApp Number -->
-              <div class="form-group" id="group-whatsapp">
-                <label for="whatsapp" class="form-label">WhatsApp Number</label>
-                <div class="input-wrapper">
-                  <i class="fa-brands fa-whatsapp input-icon"></i>
-                  <input type="tel" id="whatsapp" class="form-input" placeholder="9876543210" required>
-                  <i class="fa-solid fa-circle-check status-icon success"></i>
-                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
-                </div>
-                <span class="error-msg">Please enter a 10-digit WhatsApp number.</span>
-              </div>
-
-
-
-              <!-- Message -->
-              <div class="form-group" id="group-message">
-                <label for="message" class="form-label">Collaboration Details / Message</label>
-                <div class="input-wrapper">
-                  <i class="fa-solid fa-message input-icon msg-icon"></i>
-                  <textarea id="message" class="form-input form-textarea" placeholder="Write details about your project, idea, or questions here..." required></textarea>
-                  <i class="fa-solid fa-circle-check status-icon success"></i>
-                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
-                </div>
-                <span class="error-msg">Message must be at least 10 characters long.</span>
-              </div>
-
-              <!-- Submit Button with Loader -->
-              <button type="submit" class="btn btn-primary ripple-btn submit-btn" id="submit-btn">
-                <span class="btn-text" id="submit-text">Initiate Connection</span>
-                <i class="fa-solid fa-network-wired btn-icon" id="submit-icon"></i>
-                <div class="form-loader" id="form-loader"></div>
-              </button>
-
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
     <!-- CONTACT SECTION -->
     <section id="contact" class="contact-section scroll-reveal">
       <div class="section-container">
         
         <div class="section-header">
-          <span class="section-tag">// 05. REACHABLE</span>
           <h2 class="section-title">Direct Channels</h2>
           <div class="section-line"></div>
         </div>
@@ -897,7 +737,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
-        <a href="#register">Register</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <div class="footer-social-icons">
@@ -913,47 +753,6 @@
 
     </div>
   </footer>
-
-  <!-- FULLSCREEN SUCCESS SPLASH MODAL -->
-  <div class="success-modal" id="success-modal">
-    <div class="modal-overlay"></div>
-    <div class="success-modal-card glassmorphism-card">
-      <div class="modal-glow"></div>
-      
-      <!-- Success Icon Animation -->
-      <div class="success-icon-wrapper">
-        <div class="success-circle"></div>
-        <div class="success-icon-glowing">
-          <i class="fa-solid fa-circle-check"></i>
-        </div>
-        <div class="success-sparks">
-          <span class="spark s-1"></span>
-          <span class="spark s-2"></span>
-          <span class="spark s-3"></span>
-          <span class="spark s-4"></span>
-          <span class="spark s-5"></span>
-          <span class="spark s-6"></span>
-        </div>
-      </div>
-      
-      <h2 class="modal-title">CONNECTION ESTABLISHED</h2>
-      <p class="modal-subtitle">Registration Successfully Logged to Cloud Matrix</p>
-      
-      <!-- Submitted details table preview for premium feel -->
-      <div class="submission-details" id="modal-details-preview">
-        <!-- Filled dynamically in app.js -->
-      </div>
-      
-      <p class="modal-desc">
-        Your data has been secured in my Firebase real-time database. An email alert has been flagged. I will review and reply within 12 system hours.
-      </p>
-      
-      <button class="btn btn-primary ripple-btn close-modal-btn" id="close-modal-btn">
-        <span>Acknowledge</span>
-        <i class="fa-solid fa-square-poll-horizontal btn-icon"></i>
-      </button>
-    </div>
-  </div>
 
   <!-- Dynamic project live demo alert dialog -->
   <div class="demo-modal" id="demo-modal">
