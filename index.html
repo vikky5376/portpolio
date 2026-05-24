@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vignesh B | Futuristic Full-Stack Developer & AIML Portfolio</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Portfolio of Vignesh B, B.Sc. CS (AIML) Student & Future Full-Stack Developer. Exploring modern web apps, artificial intelligence, machine learning, and Java programming.">
+  <meta name="keywords" content="Vignesh B, Full-Stack Developer, B.Sc CS AIML, Java Programmer, Frontend Developer, Backend Developer, Portfolio, Website, Tech Startup UI">
+  <meta name="author" content="Vignesh B">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Style Sheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Futuristic Glowing Custom Cursor -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+  
+  <!-- Canvas Background for Dynamic Particle Grid -->
+  <div class="canvas-container">
+    <canvas id="particle-canvas"></canvas>
+  </div>
+  
+  <!-- Glowing Background Ambient Blobs -->
+  <div class="ambient-blob blob-1"></div>
+  <div class="ambient-blob blob-2"></div>
+  <div class="ambient-blob blob-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="header">
+    <div class="header-container">
+      <a href="#home" class="logo">
+        <span class="logo-icon">⚡</span>
+        <span class="logo-text">VIGNESH<span class="highlight">.B</span></span>
+      </a>
+      
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+          <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+          <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+          <li><a href="#register" class="nav-link nav-btn" data-section="register">Register Now</a></li>
+        </ul>
+      </nav>
+      
+      <!-- Mobile Menu Toggle Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="main-content">
+    
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+      <div class="hero-container">
+        
+        <div class="hero-image-wrapper">
+          <div class="flip-card-container">
+            <div class="flip-card-inner" id="profile-flip-card">
+              
+              <!-- Front Face of Card -->
+              <div class="flip-card-front glowing-frame">
+                <img src="profile.jpg" alt="Vignesh B" class="profile-img" id="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex'">
+                <div class="avatar-fallback" id="avatar-placeholder">
+                  <span class="fallback-initials">VB</span>
+                  <span class="fallback-glow"></span>
+                </div>
+                <div class="frame-particles">
+                  <span class="fp fp-1"></span>
+                  <span class="fp fp-2"></span>
+                  <span class="fp fp-3"></span>
+                </div>
+              </div>
+              
+              <!-- Back Face of Card -->
+              <div class="flip-card-back glowing-frame">
+                <div class="back-details">
+                  <h3 class="back-name">VIGNESH B</h3>
+                  <span class="back-role">B.Sc. CS (AIML)</span>
+                  <div class="back-divider"></div>
+                  <ul class="back-info-list">
+                    <li><i class="fa-solid fa-phone"></i> <span>99433 49064</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> <span>vikkyvikky132007@gmail.com</span></li>
+                    <li><i class="fa-solid fa-code-branch"></i> <span>AIML Specialist</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i> <span>Tamil Nadu, India</span></li>
+                  </ul>
+                  <div class="back-status">⚡ ONLINE</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="profile-badge">
+            <span class="badge-dot"></span>
+            <span class="badge-text">B.Sc. CS (AIML)</span>
+          </div>
+        </div>
+
+        <div class="hero-info">
+          <div class="welcome-tag">
+            <i class="fa-solid fa-terminal tag-icon"></i>
+            <span>SYSTEM INITIALIZED</span>
+          </div>
+          
+          <h1 class="hero-title">
+            Hi, I am <span class="gradient-text animated-name">Vignesh B</span>
+          </h1>
+          
+          <div class="typewriter-container">
+            <span class="typewriter-prefix">I am a</span>
+            <span class="typewriter-text" id="typewriter"></span>
+            <span class="typewriter-cursor">|</span>
+          </div>
+          
+          <p class="hero-desc">
+            A passionate computer science student specializing in **Artificial Intelligence and Machine Learning**. Bridging the gap between intelligent algorithms and high-performance, beautiful full-stack web applications.
+          </p>
+          
+          <div class="hero-actions">
+            <a href="#register" class="btn btn-primary ripple-btn">
+              <span class="btn-text">Hire Me</span>
+              <i class="fa-solid fa-briefcase btn-icon"></i>
+            </a>
+            <a href="resume.pdf" download class="btn btn-secondary ripple-btn">
+              <span class="btn-text">Download Resume</span>
+              <i class="fa-solid fa-download btn-icon"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline ripple-btn">
+              <span class="btn-text">Contact Me</span>
+              <i class="fa-solid fa-envelope btn-icon"></i>
+            </a>
+          </div>
+
+          <div class="tech-icons-strip">
+            <span class="tech-strip-title">CORE STACK</span>
+            <div class="tech-strip-icons">
+              <i class="fa-brands fa-html5" title="HTML5"></i>
+              <i class="fa-brands fa-css3-alt" title="CSS3"></i>
+              <i class="fa-brands fa-js" title="JavaScript"></i>
+              <i class="fa-brands fa-react" title="React JS"></i>
+              <i class="fa-brands fa-node-js" title="Node.js"></i>
+              <i class="fa-brands fa-java" title="Java"></i>
+              <i class="fa-brands fa-python" title="Python"></i>
+              <i class="fa-brands fa-git-alt" title="Git"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section scroll-reveal">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-tag">// 01. IDENTITY</span>
+          <h2 class="section-title">About Me</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-content">
+          <div class="about-details">
+            <h3 class="about-subtitle">Pioneering Intelligent Full-Stack Architectures</h3>
+            <p class="about-text">
+              I am currently pursuing a **B.Sc. in Computer Science with a specialization in Artificial Intelligence and Machine Learning**. My academic background has equipped me with strong problem-solving frameworks and analytical thinking, which I actively translate into digital solutions.
+            </p>
+            <p class="about-text">
+              I thrive at the intersection of complex back-end architectures, sleek front-end designs, and intelligent automation. Whether optimizing data structures in Java, training predictive models in Python, or building dynamic glassmorphic user interfaces in React, my goal is always to deliver premium performance and visual excellence.
+            </p>
+            
+            <!-- Technical Specialties -->
+            <div class="specialties-grid">
+              <div class="specialty-card">
+                <i class="fa-solid fa-brain specialty-icon"></i>
+                <div class="specialty-info">
+                  <h4>AI & Machine Learning</h4>
+                  <p>Developing smart cognitive pipelines, conversational chatbots, and data models.</p>
+                </div>
+              </div>
+              <div class="specialty-card">
+                <i class="fa-solid fa-code specialty-icon"></i>
+                <div class="specialty-info">
+                  <h4>Full-Stack Engineering</h4>
+                  <p>Building responsive architectures, REST APIs, and databases (MongoDB/Firebase).</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-stats-container">
+            <div class="glass-stats-card">
+              <div class="stat-item">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number" id="stat-projects" data-target="12">0</span>
+                  <span class="stat-plus">+</span>
+                </div>
+                <span class="stat-label">Projects Completed</span>
+              </div>
+              
+              <div class="stat-item">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number" id="stat-skills" data-target="16">0</span>
+                  <span class="stat-plus">+</span>
+                </div>
+                <span class="stat-label">Skills Mastered</span>
+              </div>
+              
+              <div class="stat-item">
+                <div class="stat-number-wrapper">
+                  <span class="stat-number" id="stat-progress" data-target="85">0</span>
+                  <span class="stat-percent">%</span>
+                </div>
+                <span class="stat-label">Learning Progress</span>
+              </div>
+            </div>
+
+            <!-- Sleek academic timeline -->
+            <div class="academic-timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024 - Present</span>
+                  <h4>B.Sc. Computer Science (AIML)</h4>
+                  <p>Focusing on foundational algorithms, neural networks, software engineering, and web technologies.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills-section scroll-reveal">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-tag">// 02. CAPABILITIES</span>
+          <h2 class="section-title">My Tech Stack</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <p class="section-description">
+          A comprehensive suite of technologies, programming languages, and industry concepts that I leverage to engineer premium products.
+        </p>
+
+        <!-- Skill Card Grid -->
+        <div class="skills-grid">
+          
+          <!-- HTML -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box cyan-glow">
+                <i class="fa-brands fa-html5 html-color"></i>
+              </div>
+              <span class="skill-percent">95%</span>
+            </div>
+            <h3 class="skill-name">HTML</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill html-bar" data-width="95%"></div>
+            </div>
+          </div>
+
+          <!-- CSS -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box purple-glow">
+                <i class="fa-brands fa-css3-alt css-color"></i>
+              </div>
+              <span class="skill-percent">90%</span>
+            </div>
+            <h3 class="skill-name">CSS</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill css-bar" data-width="90%"></div>
+            </div>
+          </div>
+
+          <!-- JavaScript -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box yellow-glow">
+                <i class="fa-brands fa-js js-color"></i>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <h3 class="skill-name">JavaScript</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill js-bar" data-width="88%"></div>
+            </div>
+          </div>
+
+          <!-- React JS -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box blue-glow">
+                <i class="fa-brands fa-react react-color"></i>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <h3 class="skill-name">React JS</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill react-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Node JS -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box green-glow">
+                <i class="fa-brands fa-node-js node-color"></i>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <h3 class="skill-name">Node JS</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill node-bar" data-width="80%"></div>
+            </div>
+          </div>
+
+          <!-- Express JS -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box gray-glow">
+                <i class="fa-solid fa-server express-color"></i>
+              </div>
+              <span class="skill-percent">82%</span>
+            </div>
+            <h3 class="skill-name">Express JS</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill express-bar" data-width="82%"></div>
+            </div>
+          </div>
+
+          <!-- MongoDB -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box green-glow-2">
+                <i class="fa-solid fa-database mongodb-color"></i>
+              </div>
+              <span class="skill-percent">78%</span>
+            </div>
+            <h3 class="skill-name">MongoDB</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill mongodb-bar" data-width="78%"></div>
+            </div>
+          </div>
+
+          <!-- Java -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box red-glow">
+                <i class="fa-brands fa-java java-color"></i>
+              </div>
+              <span class="skill-percent">88%</span>
+            </div>
+            <h3 class="skill-name">Java</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill java-bar" data-width="88%"></div>
+            </div>
+          </div>
+
+          <!-- Python -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box blue-yellow-glow">
+                <i class="fa-brands fa-python python-color"></i>
+              </div>
+              <span class="skill-percent">84%</span>
+            </div>
+            <h3 class="skill-name">Python</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill python-bar" data-width="84%"></div>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box orange-glow">
+                <i class="fa-brands fa-github git-color"></i>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <h3 class="skill-name">Git & GitHub</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill git-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- REST API -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box cyan-glow-2">
+                <i class="fa-solid fa-cloud-arrow-down api-color"></i>
+              </div>
+              <span class="skill-percent">85%</span>
+            </div>
+            <h3 class="skill-name">REST API</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill api-bar" data-width="85%"></div>
+            </div>
+          </div>
+
+          <!-- Responsive Design -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box purple-glow-2">
+                <i class="fa-solid fa-mobile-screen-button resp-color"></i>
+              </div>
+              <span class="skill-percent">92%</span>
+            </div>
+            <h3 class="skill-name">Responsive Design</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill resp-bar" data-width="92%"></div>
+            </div>
+          </div>
+
+          <!-- Firebase -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box gold-glow">
+                <i class="fa-solid fa-fire fire-color"></i>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <h3 class="skill-name">Firebase</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill fire-bar" data-width="80%"></div>
+            </div>
+          </div>
+
+          <!-- Problem Solving -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box pink-glow">
+                <i class="fa-solid fa-lightbulb pb-color"></i>
+              </div>
+              <span class="skill-percent">86%</span>
+            </div>
+            <h3 class="skill-name">Problem Solving</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill pb-bar" data-width="86%"></div>
+            </div>
+          </div>
+
+          <!-- DSA -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box blue-glow-2">
+                <i class="fa-solid fa-sitemap dsa-color"></i>
+              </div>
+              <span class="skill-percent">78%</span>
+            </div>
+            <h3 class="skill-name">DSA</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill dsa-bar" data-width="78%"></div>
+            </div>
+          </div>
+
+          <!-- UI/UX Basics -->
+          <div class="skill-card hover-glow">
+            <div class="skill-header">
+              <div class="skill-icon-box magenta-glow">
+                <i class="fa-solid fa-palette uiux-color"></i>
+              </div>
+              <span class="skill-percent">80%</span>
+            </div>
+            <h3 class="skill-name">UI/UX Basics</h3>
+            <div class="skill-bar-bg">
+              <div class="skill-bar-fill uiux-bar" data-width="80%"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects-section scroll-reveal">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-tag">// 03. EVIDENCE</span>
+          <h2 class="section-title">Featured Work</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <p class="section-description">
+          A showcase of application environments, platforms, and utilities built to solve specific technical and organizational hurdles.
+        </p>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: Hostel Complaint Management System -->
+          <div class="project-card tilt-card glassmorphism-card">
+            <div class="project-glow"></div>
+            <div class="project-image-box">
+              <div class="project-banner bg-gradient-1">
+                <i class="fa-solid fa-hotel banner-icon"></i>
+              </div>
+              <div class="project-tags">
+                <span>Java</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Hostel Complaint System</h3>
+              <p class="project-text">
+                A digital reporting and resolution pipeline designed for hostel administration. Allows students to log complaints, track status changes in real-time, and enables admins to assign work tickets and generate performance statistics.
+              </p>
+              <div class="project-actions">
+                <button class="btn btn-small btn-p-small ripple-btn demo-btn">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" class="btn btn-small btn-s-small ripple-btn">
+                  <span>GitHub</span>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 2: CGPA Calculator Website -->
+          <div class="project-card tilt-card glassmorphism-card">
+            <div class="project-glow"></div>
+            <div class="project-image-box">
+              <div class="project-banner bg-gradient-2">
+                <i class="fa-solid fa-calculator banner-icon"></i>
+              </div>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>UI/UX</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">CGPA Calculator Website</h3>
+              <p class="project-text">
+                An intuitive academic utility website featuring real-time calculation, custom semester credit weightings, and visual graph displays. Designed with high-end premium neon animations and an instantly responsive styling framework.
+              </p>
+              <div class="project-actions">
+                <button class="btn btn-small btn-p-small ripple-btn demo-btn">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" class="btn btn-small btn-s-small ripple-btn">
+                  <span>GitHub</span>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 3: Portfolio Website -->
+          <div class="project-card tilt-card glassmorphism-card">
+            <div class="project-glow"></div>
+            <div class="project-image-box">
+              <div class="project-banner bg-gradient-3">
+                <i class="fa-solid fa-user-astronaut banner-icon"></i>
+              </div>
+              <div class="project-tags">
+                <span>Vanilla JS</span>
+                <span>HTML5 Canvas</span>
+                <span>Neon CSS</span>
+                <span>Firebase REST</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Futuristic Portfolio Website</h3>
+              <p class="project-text">
+                The current digital workspace! Engineered from scratch using high-performance ES6 Vanilla JavaScript, lightweight HTML5 Canvas particles, interactive glassmorphism components, and absolute dark mode.
+              </p>
+              <div class="project-actions">
+                <button class="btn btn-small btn-p-small ripple-btn demo-btn">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" class="btn btn-small btn-s-small ripple-btn">
+                  <span>GitHub</span>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 4: Registration Form System -->
+          <div class="project-card tilt-card glassmorphism-card">
+            <div class="project-glow"></div>
+            <div class="project-image-box">
+              <div class="project-banner bg-gradient-4">
+                <i class="fa-solid fa-list-check banner-icon"></i>
+              </div>
+              <div class="project-tags">
+                <span>React JS</span>
+                <span>CSS Modules</span>
+                <span>Firebase Database</span>
+                <span>Real-Time</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Registration Form System</h3>
+              <p class="project-text">
+                An advanced form engine utilizing state management, real-time validation, dynamic error shake states, and double-binding input structures. Stores and syncs records asynchronously with a Firebase cloud database.
+              </p>
+              <div class="project-actions">
+                <button class="btn btn-small btn-p-small ripple-btn demo-btn">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" class="btn btn-small btn-s-small ripple-btn">
+                  <span>GitHub</span>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- PROJECT 5: AI Chatbot Project -->
+          <div class="project-card tilt-card glassmorphism-card">
+            <div class="project-glow"></div>
+            <div class="project-image-box">
+              <div class="project-banner bg-gradient-5">
+                <i class="fa-solid fa-robot banner-icon"></i>
+              </div>
+              <div class="project-tags">
+                <span>Python</span>
+                <span>NLP</span>
+                <span>AIML</span>
+                <span>WebSockets</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">AI Chatbot Project</h3>
+              <p class="project-text">
+                An interactive conversational partner that integrates NLP pipelines. Trained to interpret complex inquiries, manage dialogue states, and retrieve information with sub-second response metrics.
+              </p>
+              <div class="project-actions">
+                <button class="btn btn-small btn-p-small ripple-btn demo-btn">
+                  <span>Live Demo</span>
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </button>
+                <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" class="btn btn-small btn-s-small ripple-btn">
+                  <span>GitHub</span>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REAL-TIME REGISTRATION FORM SECTION -->
+    <section id="register" class="register-section scroll-reveal">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-tag">// 04. INTERACTION</span>
+          <h2 class="section-title">Project Registration</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="register-content">
+          
+          <div class="register-info-panel">
+            <h3 class="reg-title">Connect & Initiate</h3>
+            <p class="reg-text">
+              Interested in collaborating, hiring me for a project, or exploring one of my works? Initialize a connection right here. 
+            </p>
+            <p class="reg-text">
+              This form operates with **real-time field validation, error diagnostics, and direct storage sync** to my cloud-hosted Firebase database. Fill out your requirements, and I will be notified immediately.
+            </p>
+            
+            <div class="database-status-badge">
+              <span class="status-pulse active"></span>
+              <span class="status-label">Firebase Node: CONNECTED</span>
+            </div>
+            
+            <div class="form-features-list">
+              <div class="ff-item">
+                <i class="fa-solid fa-bolt ff-icon"></i>
+                <span>Real-Time Error Handling</span>
+              </div>
+              <div class="ff-item">
+                <i class="fa-solid fa-cloud-arrow-up ff-icon"></i>
+                <span>Immediate Database Logging</span>
+              </div>
+              <div class="ff-item">
+                <i class="fa-solid fa-bell ff-icon"></i>
+                <span>Direct Admin Instant Notification</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Glassmorphism Registration Form -->
+          <div class="glass-form-wrapper">
+            <form id="registration-form" class="registration-form" novalidate>
+              
+              <!-- Full Name -->
+              <div class="form-group" id="group-name">
+                <label for="fullName" class="form-label">Full Name</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-user input-icon"></i>
+                  <input type="text" id="fullName" class="form-input" placeholder="John Doe" required>
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
+                </div>
+                <span class="error-msg">Please enter your full name.</span>
+              </div>
+
+              <!-- Email -->
+              <div class="form-group" id="group-email">
+                <label for="email" class="form-label">Email Address</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-envelope input-icon"></i>
+                  <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
+                </div>
+                <span class="error-msg">Please enter a valid email address.</span>
+              </div>
+
+              <!-- Phone Number -->
+              <div class="form-group" id="group-phone">
+                <label for="phone" class="form-label">Phone Number</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-phone input-icon"></i>
+                  <input type="tel" id="phone" class="form-input" placeholder="9876543210" required>
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
+                </div>
+                <span class="error-msg">Please enter a 10-digit phone number.</span>
+              </div>
+
+              <!-- WhatsApp Number -->
+              <div class="form-group" id="group-whatsapp">
+                <label for="whatsapp" class="form-label">WhatsApp Number</label>
+                <div class="input-wrapper">
+                  <i class="fa-brands fa-whatsapp input-icon"></i>
+                  <input type="tel" id="whatsapp" class="form-input" placeholder="9876543210" required>
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
+                </div>
+                <span class="error-msg">Please enter a 10-digit WhatsApp number.</span>
+              </div>
+
+
+
+              <!-- Message -->
+              <div class="form-group" id="group-message">
+                <label for="message" class="form-label">Collaboration Details / Message</label>
+                <div class="input-wrapper">
+                  <i class="fa-solid fa-message input-icon msg-icon"></i>
+                  <textarea id="message" class="form-input form-textarea" placeholder="Write details about your project, idea, or questions here..." required></textarea>
+                  <i class="fa-solid fa-circle-check status-icon success"></i>
+                  <i class="fa-solid fa-triangle-exclamation status-icon error"></i>
+                </div>
+                <span class="error-msg">Message must be at least 10 characters long.</span>
+              </div>
+
+              <!-- Submit Button with Loader -->
+              <button type="submit" class="btn btn-primary ripple-btn submit-btn" id="submit-btn">
+                <span class="btn-text" id="submit-text">Initiate Connection</span>
+                <i class="fa-solid fa-network-wired btn-icon" id="submit-icon"></i>
+                <div class="form-loader" id="form-loader"></div>
+              </button>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact-section scroll-reveal">
+      <div class="section-container">
+        
+        <div class="section-header">
+          <span class="section-tag">// 05. REACHABLE</span>
+          <h2 class="section-title">Direct Channels</h2>
+          <div class="section-line"></div>
+        </div>
+
+        <p class="section-description">
+          Feel free to bridge contact through any of the channels below. I am open to discussing full-stack projects, AI modeling, or internships.
+        </p>
+
+        <div class="contact-channels-grid">
+          
+          <!-- Channel 1: Phone -->
+          <a href="tel:+919943349064" class="contact-channel-card hover-glow ripple-btn">
+            <div class="channel-icon-box blue-glow">
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            <h3>Phone Call</h3>
+            <span class="channel-detail">+91 99433 49064</span>
+            <span class="channel-action">Call Directly</span>
+          </a>
+
+          <!-- Channel 2: WhatsApp -->
+          <a href="https://wa.me/919943349064?text=Hi%20Vignesh,%20I%20viewed%20your%20futuristic%20portfolio..." target="_blank" class="contact-channel-card hover-glow ripple-btn">
+            <div class="channel-icon-box green-glow">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp Chat</h3>
+            <span class="channel-detail">+91 99433 49064</span>
+            <span class="channel-action">Message Instantly</span>
+          </a>
+
+          <!-- Channel 3: Email -->
+          <a href="mailto:vikkyvikky132007@gmail.com?subject=Inquiry%20From%20Futuristic%20Portfolio" class="contact-channel-card hover-glow ripple-btn">
+            <div class="channel-icon-box purple-glow">
+              <i class="fa-solid fa-paper-plane"></i>
+            </div>
+            <h3>Email</h3>
+            <span class="channel-detail">vikkyvikky132007@gmail.com</span>
+            <span class="channel-action">Send Mail</span>
+          </a>
+
+        </div>
+
+        <!-- Social Grid -->
+        <div class="social-networks-box">
+          <span class="social-box-title">DIGITAL PROFILE ENGINES</span>
+          <div class="social-links-grid">
+            
+            <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" class="social-link-item ripple-btn">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/vignesh-b-6ab732379" target="_blank" class="social-link-item ripple-btn">
+              <i class="fa-brands fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+
+            <a href="https://instagram.com/" target="_blank" class="social-link-item ripple-btn">
+              <i class="fa-brands fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Glowing Premium Footer -->
+  <footer class="footer">
+    <div class="footer-glow"></div>
+    <div class="footer-container">
+      
+      <div class="footer-header">
+        <a href="#home" class="logo">
+          <span class="logo-icon">⚡</span>
+          <span class="logo-text">VIGNESH<span class="highlight">.B</span></span>
+        </a>
+        <p class="footer-credo">
+          Designing premium responsive websites, intelligent logic, and complex database matrices.
+        </p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#register">Register</a>
+      </div>
+
+      <div class="footer-social-icons">
+        <a href="https://share.google/uFjDO5rGTSfNEM650" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/vignesh-b-6ab732379" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; 2026 Vignesh B. All Rights Reserved. Engineered with Futuristic Premium Glass UI.</p>
+        <span class="footer-version">NODE VERSION 2.6.5-PRO</span>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FULLSCREEN SUCCESS SPLASH MODAL -->
+  <div class="success-modal" id="success-modal">
+    <div class="modal-overlay"></div>
+    <div class="success-modal-card glassmorphism-card">
+      <div class="modal-glow"></div>
+      
+      <!-- Success Icon Animation -->
+      <div class="success-icon-wrapper">
+        <div class="success-circle"></div>
+        <div class="success-icon-glowing">
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="success-sparks">
+          <span class="spark s-1"></span>
+          <span class="spark s-2"></span>
+          <span class="spark s-3"></span>
+          <span class="spark s-4"></span>
+          <span class="spark s-5"></span>
+          <span class="spark s-6"></span>
+        </div>
+      </div>
+      
+      <h2 class="modal-title">CONNECTION ESTABLISHED</h2>
+      <p class="modal-subtitle">Registration Successfully Logged to Cloud Matrix</p>
+      
+      <!-- Submitted details table preview for premium feel -->
+      <div class="submission-details" id="modal-details-preview">
+        <!-- Filled dynamically in app.js -->
+      </div>
+      
+      <p class="modal-desc">
+        Your data has been secured in my Firebase real-time database. An email alert has been flagged. I will review and reply within 12 system hours.
+      </p>
+      
+      <button class="btn btn-primary ripple-btn close-modal-btn" id="close-modal-btn">
+        <span>Acknowledge</span>
+        <i class="fa-solid fa-square-poll-horizontal btn-icon"></i>
+      </button>
+    </div>
+  </div>
+
+  <!-- Dynamic project live demo alert dialog -->
+  <div class="demo-modal" id="demo-modal">
+    <div class="modal-overlay"></div>
+    <div class="demo-modal-card glassmorphism-card">
+      <div class="modal-glow"></div>
+      <i class="fa-solid fa-flask-vial demo-flask-icon"></i>
+      <h3 class="demo-title">PROJECT SANDBOX DEMO</h3>
+      <p class="demo-desc" id="demo-project-name">
+        The full version of this sandbox is being retrieved.
+      </p>
+      <div class="demo-badge">ENVIRONMENT: SIMULATED</div>
+      <button class="btn btn-outline close-demo-btn" id="close-demo-btn">Close Sandbox</button>
+    </div>
+  </div>
+
+  <!-- JavaScript App Logic -->
+  <script src="app.js"></script>
+</body>
+</html>
